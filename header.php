@@ -1,18 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
-
-<head profile="http://gmpg.org/xfn/11">
-	
+<head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	
 	<?php if (is_search()) { ?>
 	   <meta name="robots" content="noindex, nofollow" /> 
 	<?php } ?>
-
 	<title>
-		   <?php
+			<?php
 		      if (function_exists('is_tag') && is_tag()) {
 		         single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
 		      elseif (is_archive()) {
@@ -20,7 +14,7 @@
 		      elseif (is_search()) {
 		         echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; }
 		      elseif (!(is_404()) && (is_single()) || (is_page())) {
-		         wp_title(''); echo ' - '; }
+		         wp_title(''); echo ''; }
 		      elseif (is_404()) {
 		         echo 'Not Found - '; }
 		      if (is_home()) {
@@ -31,25 +25,61 @@
 		         echo ' - page '. $paged; }
 		   ?>
 	</title>
-	
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-	
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
-	
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <link rel="stylesheet" type="text/css" href="js/shadowbox3/shadowbox.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+    
+    <meta name="description" content="<?php if ( is_single() ) {
+        single_post_title('', true); 
+    } else {
+        bloginfo('name'); echo " - "; bloginfo('description');
+    }
+    ?>" />
+    <meta name="keywords" content="<?php bloginfo('description'); ?>" />
+    <meta name="generator" content="Page developped by Code for America, designed by Osiris" />
+    
+	<!-- link rel="shortcut icon" href="favicon.ico" / -->
+	<!--[if lte IE 7]><link href="css/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+    
+	<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="js/shadowbox3/shadowbox.js"></script>
+    <script type="text/javascript"  src="js/jquery.pngFix.js"></script>
+    <script type="text/javascript"  src="js/jquery.simplemodal.js"></script>
+    <script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script src="js/jquery/jquery.history_remote.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type='text/javascript' src='http://wa.j10s.com/wp-content/plugins/all-in-one-slideshow/cufon/cufon-yui.js?ver=3.1'></script>
+<script type='text/javascript' src='http://wa.j10s.com/wp-content/plugins/all-in-one-slideshow/cufon/fonts/Rockwell_400-Rockwell_700.font.js?ver=3.1'></script>
 
-	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
-	<?php wp_head(); ?>
-	
-</head>
+    <?php wp_head(); ?>
+    
+    <script type="text/javascript">
+		Cufon.replace('#menu-main-menu li a',{ fontFamily: 'Rockwell', textShadow: '2px 2px #000'});
+	</script>
+</head>	
 
-<body <?php body_class(); ?>>
-	
-	<div id="page-wrap">
+<body class="home">
 
-		<div id="header">
-			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-			<div class="description"><?php bloginfo('description'); ?></div>
-		</div>
+<div id="headerwrap">
+	<div id="header">
+		<div class="logo">
+    		<a href="<?php bloginfo('url'); ?>" >Wawa Welcome America Philadelphia</a>
+    		<p><?php bloginfo('description'); ?></p>
+    	</div>
+		<?php 
+			if(is_front_page()) { 
+				aio_slideshow();
+      		} else {
+				echo '<div class="homebanner"></div>';
+			}
+		?>
+        <?php wp_nav_menu(array('menu' => 'custom_menu')); ?>
+	</div>
+</div>
+        
 
+    
