@@ -20,14 +20,34 @@
     
     if (function_exists('register_sidebar')) {
     	register_sidebar(array(
-    		'name' => 'Sidebar Widgets',
-    		'id'   => 'sidebar-widgets',
+    		'name' => 'Left Sidebar',
+    		'id'   => 'left-sidebar',
     		'description'   => 'These are widgets for the sidebar.',
     		'before_widget' => '<div id="%1$s" class="widget %2$s">',
     		'after_widget'  => '</div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>'
     	));
+
+		register_sidebar(array(
+    		'name' => 'Right Sidebar',
+    		'id'   => 'right-sidebar',
+    		'description'   => 'These are widgets for the sidebar too.',
+    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h2>',
+    		'after_title'   => '</h2>'
+    	));
     }
+
+    add_action('init', 'register_custom_menu');
+ 
+    function register_custom_menu() {
+	register_nav_menu('custom_menu', __('Custom Menu'));
+    }
+
+	if ( function_exists( 'add_theme_support' ) ) { 
+	  add_theme_support( 'post-thumbnails' ); 
+	}
 
 ?>
