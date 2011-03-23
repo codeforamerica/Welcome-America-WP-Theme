@@ -74,7 +74,7 @@
 			if(is_front_page()) { 
 				aio_slideshow();
       		} else {
-				echo '<div class="homebanner"></div>';
+				echo '<div class="homebanner"><img width="960" height="362" src="'.get_bloginfo('template_directory').'/images/pgHeader/parade.jpg"></div>';
 			}
 		?>
         <?php wp_nav_menu(array('menu' => 'custom_menu')); ?>
