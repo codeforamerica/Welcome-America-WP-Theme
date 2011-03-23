@@ -20,9 +20,9 @@
     
     if (function_exists('register_sidebar')) {
     	register_sidebar(array(
-    		'name' => 'Left Sidebar',
-    		'id'   => 'left-sidebar',
-    		'description'   => 'These are widgets for the sidebar.',
+    		'name' => 'Left Top Sidebar',
+    		'id'   => 'left-top-sidebar',
+    		'description'   => 'These are widgets for upper left sidebar.',
     		'before_widget' => '<div id="%1$s" class="widget %2$s">',
     		'after_widget'  => '</div>',
     		'before_title'  => '<h2>',
@@ -30,9 +30,29 @@
     	));
 
 		register_sidebar(array(
-    		'name' => 'Right Sidebar',
-    		'id'   => 'right-sidebar',
-    		'description'   => 'These are widgets for the sidebar too.',
+    		'name' => 'Right Top Sidebar',
+    		'id'   => 'right-top-sidebar',
+    		'description'   => 'These are widgets for the upper right sidebar.',
+    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h2>',
+    		'after_title'   => '</h2>'
+    	));
+
+		register_sidebar(array(
+    		'name' => 'Left bottom Sidebar',
+    		'id'   => 'left-bottom-sidebar',
+    		'description'   => 'These are widgets for lower left sidebar.',
+    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h2>',
+    		'after_title'   => '</h2>'
+    	));
+
+		register_sidebar(array(
+    		'name' => 'Right Bottom Sidebar',
+    		'id'   => 'right-bottom-sidebar',
+    		'description'   => 'These are widgets for the lower right sidebar.',
     		'before_widget' => '<div id="%1$s" class="widget %2$s">',
     		'after_widget'  => '</div>',
     		'before_title'  => '<h2>',
