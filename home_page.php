@@ -7,16 +7,13 @@ Template Name: Homepage
 <div id="contentwrap">
 	<div id="content">
 		<div class="leftcol">
-			
-			
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Left Sidebar') ) : ?>
-			<?php endif; ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Left Top Sidebar') )  ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Left Bottom Sidebar') ) ?>
 		</div>
 		
 		<div class="rightcol">
-			
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Right Sidebar') ) : ?>
-			<?php endif; ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Right Top Sidebar') )  ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Right Bottom Sidebar') ) ?>
 		</div>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
