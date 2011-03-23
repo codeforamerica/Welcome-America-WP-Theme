@@ -313,7 +313,7 @@ strong{
 	overflow: visible;
 }
 
-.leftnav{
+.leftnav, #nav_menu-3 {
 	width: 226px;
 	background-image: url(images/layout/leftnav-bottom.png);
 	background-repeat: no-repeat;
@@ -328,7 +328,7 @@ strong{
 
 }
 
-.leftnav h3{
+.leftnav h3, #nav_menu-3 h2{
 	position: absolute;
 	width: 226px;
 	height: 126px;
@@ -467,7 +467,8 @@ li#menu-item-11 {
 
 .nav2, 
 .nav3, 
-.nav4{
+.nav4,
+.menu-weekend-highlights-container ul{
 	position: relative;
 	width:192px;
 	margin-left: 15px;
@@ -488,7 +489,8 @@ li#menu-item-11 {
 
 .nav2 li, 
 .nav3 li, 
-.nav4 li{
+.nav4 li,
+.menu-weekend-highlights-container li{
 	margin-bottom: 4px;
 	display: block;
 	width: 192px;
@@ -507,7 +509,8 @@ li#menu-item-11 {
 
 .nav2 li a, 
 .nav3 li a, 
-.nav4 li a{
+.nav4 li a,
+.menu-weekend-highlights-container li a{
 	width: 162px;
 	padding-left: 30px;
 
@@ -522,14 +525,16 @@ li#menu-item-11 {
 
 .nav2 li a:hover,
 .nav3 li a:hover,
-.nav4 li a:hover{
+.nav4 li a:hover,
+.menu-weekend-highlights-container li a:hover{
 	color: #FF6;
 	text-decoration: none;
 }
 
 .nav2 li.sel a,
 .nav3 li.sel a,
-.nav4 li.sel a{
+.nav4 li.sel a,
+menu-weekend-highlights-container li.sel a {
 	color: #FFF;
 	background-color: #ff3f3c;
 		background-image: url(images/layout/raquo-bullet.gif);
