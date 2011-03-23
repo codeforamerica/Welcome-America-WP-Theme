@@ -46,6 +46,17 @@
 	register_nav_menu('custom_menu', __('Custom Menu'));
     }
 
+	if ( function_exists( 'register_nav_menus' ) ) {
+	  	register_nav_menus(
+	  		array(
+	  		  'week_highlights' => 'Week Highlights',
+	  		  'festivities' => 'July 4th Festivities',
+			  'main_menu' => 'Main Menu',
+			  'quick_links' => 'Quick Links'
+	  		)
+	  	);
+	}
+
 	if ( function_exists( 'add_theme_support' ) ) { 
 	  add_theme_support( 'post-thumbnails' ); 
 	}
