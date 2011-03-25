@@ -19,8 +19,11 @@
 			<div class="entry">
 				
 				<h1><?php the_title(); ?></h1>
-
-				<?php the_content(); ?>
+				<?php 
+					// I don't know why, but the_content was returning the wrong entry - so I've done 
+					// the_content functionality manually.
+					echo str_replace(']]>', ']]&gt;', apply_filters('the_content',$post->post_content)); 
+				?>
 
 				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 
