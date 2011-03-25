@@ -58,11 +58,18 @@
     <?php wp_head(); ?>
     
     <script type="text/javascript">
+		// Setup where Cufon will run
 		Cufon.replace('#menu-main-menu li a',{ fontFamily: 'Rockwell', textShadow: '2px 2px #000'});
+		Cufon.replace('h1, h2',{ fontFamily: 'Rockwell'});
+		
+		// A few touchups
+		$(document).ready(function() {
+			$('.footer-widgets li:last').addClass('last');
+		});
 	</script>
 </head>	
 
-<body class="home">
+<body <?php body_class(); ?>>
 
 <div id="headerwrap">
 	<div id="header">
