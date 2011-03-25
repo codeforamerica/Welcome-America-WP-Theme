@@ -23,7 +23,7 @@
     		'name' => 'Left Top Sidebar',
     		'id'   => 'left-top-sidebar',
     		'description'   => 'These are widgets for upper left sidebar.',
-    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'before_widget' => '<div id="%1$s" class="uplt-widgets widget %2$s">',
     		'after_widget'  => '</div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>'
@@ -33,7 +33,7 @@
     		'name' => 'Right Top Sidebar',
     		'id'   => 'right-top-sidebar',
     		'description'   => 'These are widgets for the upper right sidebar.',
-    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'before_widget' => '<div id="%1$s" class="uprt-widgets widget %2$s">',
     		'after_widget'  => '</div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>'
@@ -43,7 +43,7 @@
     		'name' => 'Left bottom Sidebar',
     		'id'   => 'left-bottom-sidebar',
     		'description'   => 'These are widgets for lower left sidebar.',
-    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'before_widget' => '<div id="%1$s" class="lwlt-widgets widget %2$s">',
     		'after_widget'  => '</div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>'
@@ -53,11 +53,31 @@
     		'name' => 'Right Bottom Sidebar',
     		'id'   => 'right-bottom-sidebar',
     		'description'   => 'These are widgets for the lower right sidebar.',
-    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'before_widget' => '<div id="%1$s" class="lwrt-widgets widget %2$s">',
     		'after_widget'  => '</div>',
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>'
     	));
+		
+		register_sidebar(array(
+    		'name' => 'Sponsors',
+    		'id'   => 'sponsor-widgets',
+    		'description'   => 'These are widgets will go in the sticky footer.',
+    		'before_widget' => '<div id="%1$s" class="sponsor-widgets widget %2$s">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h2>',
+    		'after_title'   => '</h2>'
+    	));
+
+		register_sidebar(array(
+			'name' => 'Footer menu',
+			'id'   => 'footer-widgets',
+			'description'   => 'This is where your footer menu will live',
+			'before_widget' => '<div id="%1$s" class="footer-widgets widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2>',
+			'after_title'   => '</h2>'
+		));
     }
 
     add_action('init', 'register_custom_menu');
@@ -72,7 +92,8 @@
 	  		  'week_highlights' => 'Week Highlights',
 	  		  'festivities' => 'July 4th Festivities',
 			  'main_menu' => 'Main Menu',
-			  'quick_links' => 'Quick Links'
+			  'quick_links' => 'Quick Links',
+			  'footer_menu' => 'Footer Menu'
 	  		)
 	  	);
 	}
