@@ -247,6 +247,7 @@ strong{
 	background-image: url(images/layout/footer-bg.gif);
 	background-repeat: no-repeat;
 	background-position: center 0px;
+	margin-bottom:150px;
 }
 
 #header, #footer, #content{
@@ -297,9 +298,20 @@ strong{
 /*================================================================================= FOOTER */
 
 #footer {
-	min-height: 40px;
-	position: relative;
+	position:fixed;
+	bottom: 0;
+	text-align:center;
+	width: 100%;
+	background-color:#FFFFFF;
+	z-index: 200;
+	padding: 5px;
 } 
+
+#footer h2 {
+	color:#578CF5;
+	width:200px;
+	float:left;
+}
 
 /*================================================================================= NAV HOLDERS */
 
@@ -353,7 +365,7 @@ strong{
 	overflow: visible;
 }
 
-.rightnav{
+.rightnav, .menu-july-4th-festivities-container{
 	width: 226px;
 	
 	background-image: url(images/layout/rightnav-bottom.png);
@@ -372,6 +384,15 @@ strong{
 	left: -5px;
 }
 
+#nav_menu-2 h2 {
+	width: 226px;
+	height: 121px;
+	background-image: url(images/layout/rightnav-top.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	overflow: hidden;
+	text-indent: -1000px;
+}
 .rightnav h3{
 	position: absolute;
 	width: 226px;
@@ -468,7 +489,8 @@ li#menu-item-11 {
 .nav2, 
 .nav3, 
 .nav4,
-.menu-weekend-highlights-container ul{
+.menu-weekend-highlights-container ul,
+.menu-july-4th-festivities-container ul {
 	position: relative;
 	width:192px;
 	margin-left: 15px;
@@ -479,7 +501,8 @@ li#menu-item-11 {
 	float: left;
 	clear: both;
 }
-.nav3{
+.nav3, 
+.menu-july-4th-festivities-container ul{
 	background-color: #578cf5;
 	margin-bottom: 10px;
 }
@@ -490,7 +513,8 @@ li#menu-item-11 {
 .nav2 li, 
 .nav3 li, 
 .nav4 li,
-.menu-weekend-highlights-container li{
+.menu-weekend-highlights-container li,
+.menu-july-4th-festivities-container li {
 	margin-bottom: 4px;
 	display: block;
 	width: 192px;
@@ -510,7 +534,8 @@ li#menu-item-11 {
 .nav2 li a, 
 .nav3 li a, 
 .nav4 li a,
-.menu-weekend-highlights-container li a{
+.menu-weekend-highlights-container li a,
+.menu-july-4th-festivities-container li a {
 	width: 162px;
 	padding-left: 30px;
 
@@ -526,7 +551,8 @@ li#menu-item-11 {
 .nav2 li a:hover,
 .nav3 li a:hover,
 .nav4 li a:hover,
-.menu-weekend-highlights-container li a:hover{
+.menu-weekend-highlights-container li a:hover,
+.menu-july-4th-festivities-container li a:hover {
 	color: #FF6;
 	text-decoration: none;
 }
@@ -534,18 +560,19 @@ li#menu-item-11 {
 .nav2 li.sel a,
 .nav3 li.sel a,
 .nav4 li.sel a,
-menu-weekend-highlights-container li.sel a {
+.menu-weekend-highlights-container li.sel a,
+.menu-july-4th-festivities-container li.sel a {
 	color: #FFF;
 	background-color: #ff3f3c;
-		background-image: url(images/layout/raquo-bullet.gif);
+	background-image: url(images/layout/raquo-bullet.gif);
 	background-position: 15px 6px;
 	background-repeat: no-repeat;
 }
 
-.nav3, .nav4{
+.nav3, .nav4, #menu-july-4th-festivities{
 	margin-left: 18px;
 }
-.nav3 li.sel a{
+.nav3 li.sel a, #menu-july-4th-festivities li.sel a {
 	background-color: #74a9f8;
 }
 .nav4{
@@ -576,6 +603,16 @@ menu-weekend-highlights-container li.sel a {
 	background-repeat: no-repeat;
 
 }
+
+.rightcol #nav_menu-2 {
+	margin-top: -118px;
+}
+.leftcol #nav_menu-2 {
+	clear:both;
+}
+#nav_menu-2 h2 {
+	margin-bottom:0;
+}
 /*================================================================================= HEADER */
 
 
@@ -584,7 +621,7 @@ menu-weekend-highlights-container li.sel a {
 
 /*================================================================================= FOOTER */
 
-.footernav{
+.footer-widgets div{
 	margin-top: 24px;
 	position: relative;
 	width: 700px;
@@ -594,28 +631,27 @@ menu-weekend-highlights-container li.sel a {
 	clear: both;
 }
 
-.footernav li a:hover{
+.footer-widgets ul li a:hover{
 	color: #4372D5;
 }
-
-.footernav li.sel a, .footernav li.sel a:hover{
+ 
+.footer-widgets ul li.sel a, .footer-widgets ul li.sel:hover{
 	color: #036;
 	font-weight: bold;
 }
 
-.footernav li{
+.footer-widgets ul li {
 	border-right-width: 1px;
 	border-right-style: solid;
 	border-right-color: #7DB8E8;
 	height: 15px;
 }
-.footernav li.last{
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
+
+.footer-widgets ul li.last{
+	border:none;
 }
-.footernav li, .footernav li a{
+
+.footer-widgets ul li, .footer-widgets ul li a{
 	position: relative;
 	width: auto;
 	display: block;
@@ -627,7 +663,8 @@ menu-weekend-highlights-container li.sel a {
 	padding-right: 10px;
 	
 }
-.footernav li a{
+
+.footer-widgets ul li a{
 	margin-top: -3px;
 }
 
@@ -1060,28 +1097,16 @@ ul#pagination li{
 	width: 960px;
 }
 
-.homelogos1{
-	height: 51px;
-	margin: 0px;
-	margin-left: 350px;
-	padding: 0px;
-	display: block;
-}
-.homelogos1.top {
-	margin-left: 310px;
-}
-.homelogos1 li{
+.sponsor-widgets ul li{
 	height: 51px;
 	float: left;
-	clear: none;
-	margin-left: 5px;
 	margin-right: 5px;
 	width: auto;
 	padding: 0px;
 	/*border: 1px solid red;*/
 }
 
-.homelogos1 li.first{ margin-left: 210px; }
+/*.homelogos1 li.first{ margin-left: 210px; }*/
 
 .homelogos2{
 	height: 39px;
@@ -1233,3 +1258,6 @@ overflow:hidden;
 .advert img {
 	margin: 20px 30px;
 }
+
+/* Event list view override */
+.category-events #tec-content { margin-left: 220px !important; }
