@@ -325,7 +325,7 @@ strong{
 	overflow: visible;
 }
 
-.leftnav, #nav_menu-3 {
+.leftnav, .uplt-widgets {
 	width: 226px;
 	background-image: url(images/layout/leftnav-bottom.png);
 	background-repeat: no-repeat;
@@ -340,7 +340,7 @@ strong{
 
 }
 
-.leftnav h3, #nav_menu-3 h2{
+.leftnav h3, .uplt-widgets h2{
 	position: absolute;
 	width: 226px;
 	height: 126px;
@@ -384,7 +384,7 @@ strong{
 	left: -5px;
 }
 
-#nav_menu-2 h2 {
+.uprt-widgets h2 {
 	width: 226px;
 	height: 121px;
 	background-image: url(images/layout/rightnav-top.png);
@@ -604,13 +604,13 @@ li#menu-item-11 {
 
 }
 
-.rightcol #nav_menu-2 {
+.rightcol .uprt-widgets {
 	margin-top: -118px;
 }
-.leftcol #nav_menu-2 {
+.leftcol .uprt-widgets {
 	clear:both;
 }
-#nav_menu-2 h2 {
+.uprt-widgets h2 {
 	margin-bottom:0;
 }
 /*================================================================================= HEADER */
