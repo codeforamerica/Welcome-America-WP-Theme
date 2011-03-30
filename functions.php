@@ -101,5 +101,11 @@
 	if ( function_exists( 'add_theme_support' ) ) { 
 	  add_theme_support( 'post-thumbnails' ); 
 	}
+	
+	function add_iframe($initArray) {
+		$initArray['extended_valid_elements'] = "iframe[id|class|title|style|align|frameborder|height|longdesc|marginheight|marginwidth|name|scrolling|src|width]";
+		return $initArray;
+	}
 
+	add_filter('tiny_mce_before_init', 'add_iframe');
 ?>
