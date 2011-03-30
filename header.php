@@ -65,11 +65,18 @@
 		$(document).ready(function() {
 			// Remove a border from the last footer link
 			$('.footer-widgets li:last').addClass('last');
+			setContentHeight();
+			
+			$('window').scroll(function(ev) {
+				setContentHeight();
+			});
 			
 			// Determine the tallest column and make sure the page stretches the whole length
-			var heights = [$('.leftcol').height(), $('.textcolumn').height(), $('.rightcol').height()];
-			heights.sort(function (a, b) { return b - a; });
-			$('#contentwrap').css('height',heights[0]);
+			function setContentHeight(){ 
+				var heights = [$('.leftcol').height(), $('.textcolumn').height(), $('.rightcol').height(), $('#tec-content').height()];
+				heights.sort(function (a, b) { return b - a; });
+				$('#contentwrap').css('height',heights[0]);
+			}
 		});
 	</script>
 </head>	

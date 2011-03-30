@@ -560,8 +560,8 @@ li#menu-item-11 {
 .nav2 li.sel a,
 .nav3 li.sel a,
 .nav4 li.sel a,
-.menu-weekend-highlights-container li.sel a,
-.menu-july-4th-festivities-container li.sel a {
+.menu-weekend-highlights-container li.current-menu-item a,
+.menu-july-4th-festivities-container li.current-menu-item a {
 	color: #FFF;
 	background-color: #ff3f3c;
 	background-image: url(images/layout/raquo-bullet.gif);
@@ -572,7 +572,7 @@ li#menu-item-11 {
 .nav3, .nav4, #menu-july-4th-festivities{
 	margin-left: 18px;
 }
-.nav3 li.sel a, #menu-july-4th-festivities li.sel a {
+.nav3 li.sel a, .menu-july-4th-festivities-container li.current-menu-item a{
 	background-color: #74a9f8;
 }
 .nav4{
@@ -669,7 +669,11 @@ li#menu-item-11 {
 }
 
 
-
+.footer-widgets li.current-menu-item a,
+.footer-widgets li.current-menu-item a:hover  {
+	color:#003366;
+	font-weight: bold;
+}
 
 /*================================================================================= INTERIOR PAGE */
 
@@ -1261,3 +1265,31 @@ overflow:hidden;
 
 /* Event list view override */
 .category-events #tec-content { margin-left: 220px !important; }
+
+/* Category list styling */
+.lcp_catlist { margin-top: 36px; }
+.lcp_catlist a {
+	display: block;
+	font-size: 1.2em;
+}
+
+
+/* New column layout */
+/*
+body.home .leftcol {
+	width: 226px;
+	float: left;
+}
+
+body.home .textcolumn {
+	width:490px;
+	float:left;
+	margin-left:0;
+	clear:none;
+}
+
+body.home .rightcol {
+	width: 226px;
+	float:left;
+}
+*/
