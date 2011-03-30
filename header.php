@@ -52,8 +52,7 @@
     <script src="js/jquery/jquery.history_remote.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
     <script type='text/javascript' src='http://wa.j10s.com/wp-content/plugins/all-in-one-slideshow/cufon/cufon-yui.js?ver=3.1'></script>
-<script type='text/javascript' src='http://wa.j10s.com/wp-content/plugins/all-in-one-slideshow/cufon/fonts/Rockwell_400-Rockwell_700.font.js?ver=3.1'></script>
-
+	<script type='text/javascript' src='http://wa.j10s.com/wp-content/plugins/all-in-one-slideshow/cufon/fonts/Rockwell_400-Rockwell_700.font.js?ver=3.1'></script>
 
     <?php wp_head(); ?>
     
@@ -64,7 +63,13 @@
 		
 		// A few touchups
 		$(document).ready(function() {
+			// Remove a border from the last footer link
 			$('.footer-widgets li:last').addClass('last');
+			
+			// Determine the tallest column and make sure the page stretches the whole length
+			var heights = [$('.leftcol').height(), $('.textcolumn').height(), $('.rightcol').height()];
+			heights.sort(function (a, b) { return b - a; });
+			$('#contentwrap').css('height',heights[0]);
 		});
 	</script>
 </head>	
