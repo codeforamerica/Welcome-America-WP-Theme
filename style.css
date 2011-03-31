@@ -107,12 +107,7 @@ body {
 	clear: both;
 	position: relative;
 	height:auto !important;
-	height:450px;
-	min-height:450px;
 	margin-left: 235px;
-
-
-
 }
 
 .textcolumn ul{
@@ -1273,7 +1268,10 @@ overflow:hidden;
 	font-size: 1.2em;
 }
 
-
+/* Category page-specific styles */
+.category-announcements {
+	margin-bottom:36px;
+}
 /* New column layout */
 /*
 body.home .leftcol {
