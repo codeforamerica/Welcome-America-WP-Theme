@@ -3,17 +3,14 @@
 	<div id="content">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="leftcol">
-			
-			
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Left Sidebar') ) : ?>
-			<?php endif; ?>
-			
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Right Sidebar') ) : ?>
-			<?php endif; ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Left Top Sidebar') ) ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Right Top Sidebar') ) ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Left Bottom Sidebar') ) ?>
 		</div>
 		
 		<div class="rightcol">
 			<div class="photoholder"><?php echo get_the_post_thumbnail($post->ID); ?><img width="152" height="214" src="images/pgImages/wawa-hoagie-day.jpg"></div>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Right Bottom Sidebar') ) ?>
 		</div>
 		<div class="textcolumn <?php echo get_post_class() ?>" id="post-<?php the_ID(); ?>">
 
@@ -24,12 +21,6 @@
 			<div class="entry">
 				<?php the_content(); ?>
 			</div>
-
-			<!--div class="postmetadata">
-				<?php the_tags('Tags: ', ', ', '<br />'); ?>
-				Posted in <?php the_category(', ') ?> | 
-				<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
-			</div-->
 
 		</div>
 
