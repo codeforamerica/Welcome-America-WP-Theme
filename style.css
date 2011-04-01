@@ -163,7 +163,7 @@ h2 {
 	color: #5078D7;
 }
 body.home h2{
-	color: #7DBBC9;
+	color: #4879d7;
 }
 
 h3{
@@ -179,6 +179,7 @@ h3{
 h4{
 	font-size: 1.2em;
 }
+
 h6 {
 	color: #83A2C6;
 	font-weight: bold;
@@ -295,12 +296,19 @@ strong{
 #footer {
 	position:fixed;
 	bottom: 0;
+	left:50%;
+	margin-left:-568px;
 	text-align:center;
-	width: 100%;
-	background-color:#FFFFFF;
+	width: 1136px;
+	height:82px;
+	background:url(images/layout/newfooter-bg.gif) no-repeat;
 	z-index: 200;
 	padding: 5px;
 } 
+
+#footer div {
+	margin:30px 0 0 75px;
+	}
 
 #footer h2 {
 	color:#578CF5;
@@ -331,8 +339,6 @@ strong{
 	position: relative;
 	float: left;
 	clear: both;
-
-
 }
 
 .leftnav h3, .uplt-widgets h2{
@@ -355,10 +361,34 @@ strong{
 	right: 5px;
 	top: -45px;
 	display: block;
-
 	z-index: 151;
 	overflow: visible;
 }
+
+.rightcol h2 {
+	width: 212px;
+	height: 30px;
+	overflow: hidden;
+	text-indent: 20px;
+	padding-top:20px;
+	background-image: url(images/layout/widgetheader.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	clear:both;
+}
+
+.widget {
+	margin-bottom:15px;
+	}
+
+.widget ul {
+	margin-left:25px;
+	
+	}
+
+.widget li {
+	list-style-image:url(images/layout/widgetli.gif)
+	}
 
 .rightnav, .menu-july-4th-festivities-container{
 	width: 226px;
@@ -387,6 +417,7 @@ strong{
 	background-position: 0px 0px;
 	overflow: hidden;
 	text-indent: -1000px;
+	padding-top:0px;
 }
 .rightnav h3{
 	position: absolute;
@@ -1065,10 +1096,6 @@ ul#pagination li{
 .homeannouncements p, 
 .widget_categoryposts li {
 	margin-bottom: 7px;
-	background-image: url(images/layout/redarrow.gif);
-	background-repeat: no-repeat;
-	background-position: 30px 5px;
-	padding-left: 40px;
 }
 
 .homeannouncements strong{
@@ -1260,6 +1287,15 @@ overflow:hidden;
 
 /* Event list view override */
 .category-events #tec-content { margin-left: 220px !important; }
+
+h4.event-day {
+	color: #5078D7;
+    font-family: "Courier New",Courier,monospace;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1em;
+    margin-bottom: 0.5em;
+}
 
 /* Category list styling */
 .lcp_catlist { margin-top: 36px; }

@@ -59,7 +59,7 @@
     <script type="text/javascript">
 		// Setup where Cufon will run
 		Cufon.replace('#menu-main-menu li a',{ fontFamily: 'Rockwell', textShadow: '2px 2px #000'});
-		Cufon.replace('h1, h2',{ fontFamily: 'Rockwell'});
+		Cufon.replace('h1, h2, h4.event-day',{ fontFamily: 'Rockwell'});
 		
 		// A few touchups
 		$(document).ready(function() {
