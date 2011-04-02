@@ -18,6 +18,7 @@
     add_action('init', 'removeHeadLinks');
     remove_action('wp_head', 'wp_generator');
     
+	// Set up all of the sidebars
     if (function_exists('register_sidebar')) {
     	register_sidebar(array(
     		'name' => 'Left Top Sidebar',
@@ -79,12 +80,11 @@
 			'after_title'   => '</h2>'
 		));
     }
-
     add_action('init', 'register_custom_menu');
  
-    function register_custom_menu() {
-	register_nav_menu('custom_menu', __('Custom Menu'));
-    }
+	// This 'custom menu' code was in the original template.
+	// I'm not familiar enough with wp menus to know if it should be here or not. -JM
+    function register_custom_menu() { register_nav_menu('custom_menu', __('Custom Menu')); }
 
 	if ( function_exists( 'register_nav_menus' ) ) {
 	  	register_nav_menus(
@@ -98,14 +98,25 @@
 	  	);
 	}
 
-	if ( function_exists( 'add_theme_support' ) ) { 
-	  add_theme_support( 'post-thumbnails' ); 
-	}
+	// Turn on the 'featured image' capability
+	if ( function_exists( 'add_theme_support' ) ) { add_theme_support( 'post-thumbnails' ); }
 	
+	// Some pages on this site need iframes and this filter will stop the wysiwyg editor from stripping out the iframe html
 	function add_iframe($initArray) {
 		$initArray['extended_valid_elements'] = "iframe[id|class|title|style|align|frameborder|height|longdesc|marginheight|marginwidth|name|scrolling|src|width]";
 		return $initArray;
 	}
-
 	add_filter('tiny_mce_before_init', 'add_iframe');
+	
+	function get_the_category_thumbnail( $id ) {
+		$embed = '';
+		$posts = get_posts('cat='.$id.'&showposts=1&meta_key=_thumbnail_id');
+		foreach( $posts as $post ) { 
+			setup_postdata($post);
+			$imageid = get_post_thumbnail_id($post->ID);
+			$embed = '<img src="'.wp_get_attachment_thumb_url($imageid).'" alt="'.get_the_title($imageid).'" class="" />';
+		}
+		return $embed;
+	}
+	
 ?>
