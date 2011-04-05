@@ -1142,7 +1142,7 @@ ul#pagination li{
 	margin-right: 5px;
 	width: auto;
 	padding: 0px;
-	list-style: none;
+	list-style-image:none;
 }
 
 /*.homelogos1 li.first{ margin-left: 210px; }*/
@@ -1310,6 +1310,13 @@ h4.event-day {
     font-weight: bold;
     line-height: 1.1em;
     margin-bottom: 0.5em;
+}
+
+#tec-event-meta .gmap, .tec-event-meta-desc .gmap {
+    background: none repeat scroll 0 0 #3D6294;
+    color: #FFFFFF;
+    font-size: 9px;
+    padding: 1px 5px;
 }
 
 /* Category list styling */
