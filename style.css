@@ -1319,6 +1319,12 @@ h4.event-day {
     padding: 1px 5px;
 }
 
+.tec-month-nav a { color: #333333; }
+.tec-month-nav a:hover {
+	text-decoration: none;
+	color: #114B7D;
+}
+
 /* Category list styling */
 .lcp_catlist { margin-top: 36px; }
 .lcp_catlist a {
