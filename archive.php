@@ -8,7 +8,15 @@
 		</div>
 
 		<div class="rightcol">
-			<div class="photoholder"><?php echo get_the_post_thumbnail($post->ID); ?><img width="152" height="214" src="images/pgImages/wawa-hoagie-day.jpg"></div>
+			<div class="photoholder">
+			<?php 
+				if (is_category()) { 
+					$cat = get_the_category($post->ID);
+					//print_r($cat);
+					echo get_the_category_thumbnail($cat[0]->cat_ID); 
+				}
+			?>
+			</div>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Right Bottom Sidebar') ) ?>
 		</div>
 		
@@ -17,7 +25,9 @@
 
  			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 
-			<?php /* If this is a category archive */ if (is_category()) { ?>
+			<?php /* If this is a category archive */ if (is_category()) { 
+				$cat = get_the_category($post->ID);
+			?>
 				<h2><?php single_cat_title(); ?></h2>
 
 			<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>

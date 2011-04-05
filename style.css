@@ -1087,14 +1087,17 @@ ul#pagination li{
 	background-position: 0px 0px;
 }
 
-.homeannouncements ul, .widget_categoryposts ul{
+.homeannouncements ul,
+.widget_categoryposts ul,
+.eventsListWidget ul{
 	width: 190px;
 
 }
 
 .homeannouncements li,
 .homeannouncements p, 
-.widget_categoryposts li {
+.widget_categoryposts li,
+.eventsListWidget li {
 	margin-bottom: 7px;
 }
 
@@ -1107,13 +1110,25 @@ ul#pagination li{
 	font-weight: bold;
 }
 
-.homeannouncements a, .widget_categoryposts a{
+.homeannouncements a,
+.widget_categoryposts a,
+.eventsListWidget a{
 	color: #333;
 }
 
-.post-date {
+.post-date,
+.eventsListWidget .when {
 	color: #0000FF;
 	font-weight: bold;
+}
+
+.eventsListWidget .event {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.eventsListWidget .more-link {
+	display: none;	/* I'm doing this so I don't have to hack the widget */
 }
 
 .contentfooter{
@@ -1182,6 +1197,8 @@ ul#pagination li{
 .photoholder img{
 	margin-left: 17px;
 	margin-top: 18px;
+	width: 152px;
+	height: 214px;
 }
 
 .sectionheader{
@@ -1316,6 +1333,7 @@ h4.event-day {
 .category-announcements {
 	margin-bottom:36px;
 }
+
 /* New column layout */
 /*
 body.home .leftcol {
