@@ -233,17 +233,15 @@ strong{
 	background-position: center 0px;
 }
 
-#contentwrap{
+#contentwrap, #footerwrap{
 	background-image: url(images/layout/body-bg.gif);
 	background-repeat: repeat-y;
 	background-position: center 0px;
 }
 
 #footerwrap{
-	background-image: url(images/layout/footer-bg.gif);
-	background-repeat: no-repeat;
-	background-position: center 0px;
-	margin-bottom:150px;
+	padding-bottom: 73px;
+	position: relative;
 }
 
 #header, #footer, #content{
@@ -293,7 +291,7 @@ strong{
 
 /*================================================================================= FOOTER */
 
-#footer {
+#sponsor-wrapper {
 	position:fixed;
 	bottom: 0;
 	left:50%;
@@ -306,11 +304,11 @@ strong{
 	padding: 5px;
 } 
 
-#footer div {
+#sponsor-wrapper div {
 	margin:30px 0 0 75px;
 	}
 
-#footer h2 {
+#sponsor-wrapper h2 {
 	color:#578CF5;
 	width:200px;
 	float:left;
@@ -1144,7 +1142,7 @@ ul#pagination li{
 	margin-right: 5px;
 	width: auto;
 	padding: 0px;
-	/*border: 1px solid red;*/
+	list-style: none;
 }
 
 /*.homelogos1 li.first{ margin-left: 210px; }*/
