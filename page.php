@@ -9,7 +9,7 @@
 		</div>
 		
 		<div class="rightcol">
-			<div class="photoholder"><?php echo get_the_post_thumbnail($post->ID); ?><img width="152" height="214" src="images/pgImages/wawa-hoagie-day.jpg"></div>
+			<div class="photoholder"><?php echo get_the_post_thumbnail($post->ID); ?></div>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Right Bottom Sidebar') ) ?>
 		</div>
 		
