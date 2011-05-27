@@ -11,6 +11,13 @@
 		<div class="rightcol">
 			<div class="photoholder"><?php echo get_the_post_thumbnail($post->ID); ?></div>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Right Bottom Sidebar') ) ?>
+			<div class="sponsor-advert">
+			<?php 
+				if (class_exists('CtaPlugin') && CtaPlugin::has_post_thumbnail('page', 'sponsor-image')) {
+					CtaPlugin::the_post_thumbnail('page', 'sponsor-image', NULL, 'post-sponsor-image-thumbnail'); 
+				} 
+			?>
+			</div>
 		</div>
 		
 			

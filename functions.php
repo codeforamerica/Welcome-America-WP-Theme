@@ -119,4 +119,15 @@
 		return $embed;
 	}
 	
+	// Set up the sponsor image
+	if (class_exists('CtaPlugin')) {
+			new CtaPlugin(array(
+				'label' => 'Sponsor Image',
+				'id' => 'sponsor-image',
+				'post_type' => 'page'
+			)
+		);
+	}
+	
+	
 ?>
