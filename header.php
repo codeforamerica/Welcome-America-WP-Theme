@@ -51,8 +51,8 @@
     <script type="text/javascript" src="js/jquery.form.js"></script>
     <script src="js/jquery/jquery.history_remote.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
-    <script type='text/javascript' src='http://wa.j10s.com/wp-content/plugins/all-in-one-slideshow/cufon/cufon-yui.js?ver=3.1'></script>
-	<script type='text/javascript' src='http://wa.j10s.com/wp-content/plugins/all-in-one-slideshow/cufon/fonts/Rockwell_400-Rockwell_700.font.js?ver=3.1'></script>
+    <script type='text/javascript' src='/wp-content/plugins/all-in-one-slideshow/cufon/cufon-yui.js?ver=3.1'></script>
+	<script type='text/javascript' src='/wp-content/plugins/all-in-one-slideshow/cufon/fonts/Rockwell_400-Rockwell_700.font.js?ver=3.1'></script>
 
     <?php wp_head(); ?>
     
